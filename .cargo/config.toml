@@ -1,0 +1,6 @@
+# Windows workaround: `anchor build` runs cargo-build-sbf from a verbatim
+# (`\?\C:\...`) path, and the rustc 1.79 bundled with Solana platform-tools
+# cannot `include!` build-script output from such paths. An explicit,
+# non-verbatim target dir avoids it. Adjust (or delete) on other machines.
+[build]
+target-dir = "C:/Users/vivek/Downloads/Solana-Assessment/Solana-Assessment/target"
